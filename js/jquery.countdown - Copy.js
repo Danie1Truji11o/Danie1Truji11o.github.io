@@ -11,68 +11,10 @@ and GPL-3.0 (http://opensource.org/licenses/GPL-3.0) licenses.
 @version: 1.0.1
 */
 
-// CHANGE YOUR NEW DATE HERE
-var year = 2021;
-var month = 1;
-var day = 28;
-var hour = 19;
-var min = 0;
-var sec = 0;
 
-var new_date = new Date(year, month, day, hour, min, sec);
-var curr_date = new Date();
-var diff = Math.abs(new_date - curr_date);
-
-// diff must be in milliseconds
-function remain_time(diff) {
-	var y = Math.floor(diff/31556952000);
-	var rem_y = (diff%31556952000);
-	
-	var M = Math.floor(this.rem_y/2592000000);
-	var rem_M = (this.rem_y%31556952000);
-
-	var d = Math.floor(this.rem_M/86400000);
-	var rem_d = (this.rem_M%86400000);
-
-	var h = Math.floor(this.rem_d/3600000);
-	var rem_h = (this.rem_d%86400000);
-
-	var m = Math.floor(this.rem_h/60000);
-	var rem_m = (this.rem_h%60000);
-
-	var s = Math.floor(this.rem_m/1000);
-	var rem_ms = (this.rem_m%1000);
-
-	return [y, M, d, h, m, s];
-};
-
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-};
-
-
-$(document).ready(function(){
-	while (diff > 0){
-
-		var [y, M, d, h, m, s] = remain_time(diff);
-
-		$(.countdown).html("<div id='countdown-days'>"+ d +"<span>days</span></div>");
-		$(.countdown).html("<div id='countdown-hrs'>"+ h +"<span>hrs</span></div>");
-		$(.countdown).html("<div id='countdown-mins'>"+ m +"<span>mins</span></div>");
-		$(.countdown).html("<div id='countdown-secs'>"+ s +"<span>secs</span></div>");
-
-		await sleep(800);
-		diff -= 1000;
-	};
-
-
-});
-
-/*
 (function() {
 
   (function($) {
-
     $.countdown = function(el, options) {
       var getDateData,
         _this = this;
@@ -168,8 +110,6 @@ $(document).ready(function(){
       };
       return this.init();
     };
-
-
     $.countdown.defaultOptions = {
       date: "June 7, 2087 15:03:25",
       refresh: 1000,
@@ -178,8 +118,6 @@ $(document).ready(function(){
         return $(this.el).html("" + date.years + " years, " + date.days + " days, " + (this.leadingZeros(date.hours)) + " hours, " + (this.leadingZeros(date.min)) + " min and " + (this.leadingZeros(date.sec)) + " sec");
       }
     };
-
-
     $.fn.countdown = function(options) {
       return $.each(this, function(i, el) {
         var $el;
@@ -189,11 +127,7 @@ $(document).ready(function(){
         }
       });
     };
-
     return void 0;
-
   })(jQuery);
 
 }).call(this);
-
-*/
