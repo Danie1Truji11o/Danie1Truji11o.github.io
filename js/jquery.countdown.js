@@ -42,7 +42,7 @@ var new_date = 28
       };
       getDateData = function(endDate) {
         var dateData, diff;
-        endDate = Date.parse($.isPlainObject(_this.options.date) ? _this.options.date : new Date(new_year, new_month, new_date));
+        endDate = Date.parse($.isPlainObject(_this.options.date) ? _this.options.date : new Date(_this.options.date));
         diff = (endDate - Date.parse(new Date)) / 1000;
         if (diff <= 0) {
           diff = 0;
