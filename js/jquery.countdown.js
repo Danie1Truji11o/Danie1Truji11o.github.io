@@ -11,6 +11,7 @@ and GPL-3.0 (http://opensource.org/licenses/GPL-3.0) licenses.
 @version: 1.0.1
 */
 
+/*
 // CHANGE YOUR NEW DATE HERE
 var year = 2021;
 var month = 1;
@@ -56,19 +57,22 @@ $(document).ready(function(){
 
 		var [y, M, d, h, m, s] = remain_time(diff);
 
-		$(.countdown).html("<div id='countdown-days'>"+ d +"<span>days</span></div>");
-		$(.countdown).html("<div id='countdown-hrs'>"+ h +"<span>hrs</span></div>");
-		$(.countdown).html("<div id='countdown-mins'>"+ m +"<span>mins</span></div>");
-		$(.countdown).html("<div id='countdown-secs'>"+ s +"<span>secs</span></div>");
+		$(".countdown").html("<div id='countdown-days'>"+ d +"<span>days</span></div>");
+		$(".countdown").html("<div id='countdown-hrs'>"+ h +"<span>hrs</span></div>");
+		$(".countdown").html("<div id='countdown-mins'>"+ m +"<span>mins</span></div>");
+		$(".countdown").html("<div id='countdown-secs'>"+ s +"<span>secs</span></div>");
 
-		await sleep(800);
+		sleep(800);
 		diff -= 1000;
 	};
 
 
 });
 
-/*
+*/
+
+// CHANGE THE END DATE IN custom.js to change the countdown
+
 (function() {
 
   (function($) {
@@ -196,4 +200,3 @@ $(document).ready(function(){
 
 }).call(this);
 
-*/
