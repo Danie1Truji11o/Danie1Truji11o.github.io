@@ -26,7 +26,7 @@ var new_month = 01
 var new_date = 28
 
 // Run this as soon as the document is loaded and is ready
-$(document).ready(function() {
+$(function() {
 
   (function($) {
 
