@@ -1071,6 +1071,11 @@ text-align: center;
 	text-align:center;
 	margin-top:-3px;
 }
+.logo img{
+	height:50px;
+	width:auto;
+
+}
 .banner-container {
 	height: 500px;
 }
