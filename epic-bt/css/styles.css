@@ -1069,7 +1069,7 @@ text-align: center;
 }
 .logo{
 	text-align:center;
-	margin-top:1px;
+	margin-top:3px;
 }
 .logo img{
 	height:200px;
@@ -1086,7 +1086,7 @@ text-align: center;
 }
 #home .heading h2 {
 	font-size: 22px !important;
-	margin-top: 30px;
+	margin-top: 45px;
 	padding: 0 15px;
 	text-align: center;
 	line-height: 48px;
@@ -1094,6 +1094,11 @@ text-align: center;
 #home .heading strong {
 	font-size: 14px;
 }
+.heading img{
+	height:50px;
+	width:auto;
+}	
+
 .styled div {
 	display: inline-block;
 	font-size: 50px;
